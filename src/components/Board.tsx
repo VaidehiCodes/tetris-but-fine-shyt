@@ -9,7 +9,11 @@ export default function Board({ grid }: BoardProps) {
         <div
           key={i}
           className={`w-6 h-6 ${
-            cell ? "bg-blue-500" : "bg-gray-900"
+            cell === 0
+              ? "bg-gray-900"
+              : cell === 2
+              ? "bg-green-500"
+              : "bg-blue-500"
           } border border-gray-800`}
         />
       ))}
